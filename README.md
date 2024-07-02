@@ -9,10 +9,15 @@
 	
 
 ## Table of Contents
-* [General Info](#general-information)
-* [Steps Followed in the Projects](#Steps Followed in the Projects)
-* [Technologies Used](#technologies-used)
+* [Understanding the Dataset](#Understanding-the-Dataset)
+* [Objective](#Objective)
+* [Model Descriptions](#Model-Descriptions)
+* [Data Pre-processing](#Data-Pre-processing)
+* [Data Generator](#Data-Generator)
+* [Model Training](#Model-Training)
+* [Data Pre-processing](#Data-Pre-processing)
 * [Conclusions](#conclusions)
+* [Technologies Used](#technologies-used)
 * [Acknowledgements](#acknowledgements)
 
 
@@ -33,14 +38,14 @@
 -	Processes video as a 4D tensor (e.g., 100 x 100 x 30 x 3).
 -	Uses 3D filters to convolve across the x, y, and z dimensions.
 
-## Data Pre-processing:
+## Data Pre-processing
 -	Resizing: Standardizes frame dimensions.
 -	Normalization: Mitigates lighting and shadow distortions.
-## Data Generator:
+## Data Generator
 - 	Pre-processes images to handle different dimensions (70x70, 100x100, 120x120) and creates batches of video frames. Ensures consistent cropping, resizing, and normalization.
 
 
-## Model Training:
+## Model Training
 -	Experiments: Tested various model configurations, hyper-parameters, batch sizes, image dimensions, filter sizes, padding, and stride lengths.
 -	Optimization: Used SGD optimizer for better accuracy, adjusting parameters like decay rate and learning rate.
 -	Regularization: Implemented batch normalization, pooling, and dropout layers to combat overfitting.
@@ -64,6 +69,7 @@ o	Model 12 (ResNet50) showed high training accuracy but significant overfitting 
 -	Overall, transfer learning using VGG16 provided the best performance, while CNN + RNN and Conv2D + Dense architectures also showed promising results. Models using Conv2D + LSTM 	were the least effective.
 
 ## Technologies Used
+- Jarvislab (GPU Enabled)
 - RNN
 - CNN
 - VGG16
